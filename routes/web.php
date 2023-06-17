@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +18,23 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Auth
+Route::controller(LoginController::class)->group(function () {
+    Route::get('login', 'login')->name('login');
+    Route::get('register', 'register')->name('register');
+    Route::post('postlogin', 'postLogin')->name('postlogin');
+    Route::post('postregister', 'postregister')->name('register.post');
+    Route::get('logout', 'logout')->name('logout');
+});
+
+// ADMIN
+Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
+    Route::get('/admin', [AdminController::class, 'index']);
+
+    // DATA USER
+    Route::resource('/admin/user', UserController::class);
+
+});

@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('layouts.head')
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminCHICKMI | Log in</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ asset('plugins') }}/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="{{ asset('plugins') }}/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('dist') }}/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+    <body class="hold-transition login-page">
+        @yield('content')
+        <!-- /.login-box -->
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
-
-  <!-- Navbar -->
-  @include('layouts.navbar')
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  @include('layouts.main-sidebar')
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    
-    <!-- Main content -->
-    @yield('content')
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  @include('layouts.footer')
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-@include('layouts.script')
-</body>
+    <!-- jQuery -->
+    <script src="{{ asset('plugins') }}/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('plugins') }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('dist') }}/js/adminlte.min.js"></script>
+    </body>
 </html>
