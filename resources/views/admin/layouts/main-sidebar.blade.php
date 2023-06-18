@@ -34,6 +34,15 @@
           <li class="nav-header">Data Master</li>
 
           <li class="nav-item">
+            <a href="/admin/linguistik" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tabel Linguistik
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
@@ -56,15 +65,6 @@
               <i class="nav-icon far fa-image"></i>
               <p>
                 Data User
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tabel Linguistik
               </p>
             </a>
           </li>

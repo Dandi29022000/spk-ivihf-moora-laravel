@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\LinguistikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +38,6 @@ Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
     // DATA USER
     Route::resource('/admin/user', UserController::class);
 
+    // DATA TABEL LINGUISTIK
+    Route::resource('/admin/linguistik', LinguistikController::class);
 });

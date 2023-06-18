@@ -45,12 +45,8 @@
                                 <span><i></i>Admin</span>
                             </label>
                             <label class="fancy-radio">
-                                <input name="level" value="guru" type="radio">
-                                <span><i></i>Guru</span>
-                            </label>
-                            <label class="fancy-radio">
-                                <input name="level" value="siswa" type="radio">
-                                <span><i></i>Siswa</span>
+                                <input name="level" value="employee" type="radio">
+                                <span><i></i>Karyawan</span>
                             </label>
                         </div>
                         <br>
