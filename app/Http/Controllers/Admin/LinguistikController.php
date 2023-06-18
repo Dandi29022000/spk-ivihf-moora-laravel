@@ -13,18 +13,15 @@ class LinguistikController extends Controller
     public function index(Request $request)
     {
         $Linguistik = Linguistik::where([
+            ['name','!=',Null],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('name', 'LIKE', '%' . $term . '%')
-                        ->orWhere('email', 'LIKE', '%' . $term . '%')
-                        ->orWhere('alamat', 'LIKE', '%' . $term . '%')
-                        ->orWhere('tanggal_lahir', 'LIKE', '%' . $term . '%')
-                        ->orWhere('jenis_kelamin', 'LIKE', '%' . $term . '%')->get();
+                    $query->orWhere('name', 'LIKE', '%' . $term . '%')->get();
                 }
             }]
         ])
             ->orderBy('id', 'asc')
-            ->simplePaginate(5);
+            ->simplePaginate(10);
 
         return view('admin/package/linguistik/index', compact('Linguistik'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LinguistikController;
+use App\Http\Controllers\Admin\HfltsLinguistikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,7 @@ Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
 
     // DATA TABEL LINGUISTIK
     Route::resource('/admin/linguistik', LinguistikController::class);
+
+    // DATA TABEL HFLTS - LINGUISTIK
+    Route::resource('/admin/hflts', HfltsLinguistikController::class);
 });
