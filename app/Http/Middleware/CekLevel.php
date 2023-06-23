@@ -17,7 +17,9 @@ class CekLevel
     public function handle(Request $request, Closure $next, ...$levels){
         if(in_array(auth()->user()->level,$levels) == 'admin'){
             return $next($request);
-        }else{
+        } else if(in_array(auth()->user()->levels,$levels) == 'employee'){
+            return $next($request);
+        } else{
             return redirect('/login');
         }
     }

@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin CHICKMI</span>
+      <span class="brand-text font-weight-light">Employee CHICKMI</span>
     </a>
 
     <!-- Sidebar -->
@@ -23,7 +23,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/admin" class="nav-link active">
+            <a href="/employee" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -34,7 +34,7 @@
           <li class="nav-header">Data Master</li>
 
           <li class="nav-item">
-            <a href="/admin/linguistik" class="nav-link">
+            <a href="/employee/linguistik" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Tabel Linguistik
@@ -43,7 +43,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/hflts" class="nav-link">
+            <a href="/employee/hflts" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Tabel HFLTS
@@ -52,16 +52,16 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/kriteria" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Data Kriteria
+                Data Criteria
               </p>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="/admin/alternatif" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Data Alternative
@@ -70,7 +70,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="/admin/user" class="nav-link">
+            <a href="/employee/user" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Data User

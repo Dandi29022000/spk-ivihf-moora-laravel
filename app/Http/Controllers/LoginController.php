@@ -53,6 +53,8 @@ class LoginController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             if (auth()->user()->level == 'admin') {
                 return view('admin.package.dashboard')->with('success', 'Selamat datang ' . auth()->user()->name);
+            } elseif (auth()->user()->level == 'employee') {
+                return view('employee.package.dashboard')->with('success', 'Selamat datang ' . auth()->user()->name);
             } else {
                 return redirect('login');
             }

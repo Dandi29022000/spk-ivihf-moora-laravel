@@ -4,4 +4,5 @@
           <span>Copyright &copy; Your Website {{ now()->year }}</span>
       </div>
   </div>
+  All rights reserved.
 </footer>
