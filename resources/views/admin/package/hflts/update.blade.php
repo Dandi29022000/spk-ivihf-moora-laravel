@@ -15,23 +15,43 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="{{ route('linguistik.update', $Linguistik->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('hflts.update', $hfltsLinguistik->id) }}" method="post">
                         @csrf
                         @method('PUT')
-                        <div class="input-group">
-                            <label for="id" class="col-md-4 col-form-label text-md-end">{{ __('Id') }}</label>
-                            <input class="form-control" name="id" placeholder="Id" type="text" value="{{ $Linguistik->id }}" readonly>
-                        </div>
+                            <div class="input-group">
+                                <label for="id" class="col-md-4 col-form-label text-md-end">{{ __('Id') }}</label>
+                                <input class="form-control" name="id" placeholder="Id" type="text" value="{{ $hfltsLinguistik->id }}" readonly>
+                            </div>
                         <br>
                             <div class="input-group">
-                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-                                <input class="form-control" name="name" placeholder="Name" type="text" value="{{ $Linguistik->name }}">
+                                <label for="id_linguistik" class="col-md-4 col-form-label text-md-end">Linguistik</label>
+                                <select name="id_linguistik" id="id_linguistik" class="form-control">
+                                <option selected disabled>Pilih Linguistik</option>
+                                @foreach($Linguistik as $l)
+                                    <option value="{{ $l->id }}">{{ $l->name }}</option>
+                                @endforeach
+                                </select>
+                            </div>
+                        <br>
+                            <div class="input-group">
+                                <label for="A" class="col-md-4 col-form-label text-md-end">{{ __('A') }}</label>
+                                <input class="form-control" name="A" placeholder="" type="text" value="{{ $hfltsLinguistik->A }}">
                             </div>
                         <br>
                         <div class="input-group">
-                            <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('Masukkan Foto') }}</label>
-                            <input class="form-control" name="image" type="file" value="{{ $Linguistik->image }}">
-                        </div>
+                                <label for="B" class="col-md-4 col-form-label text-md-end">{{ __('B') }}</label>
+                                <input class="form-control" name="B" placeholder="" type="text" value="{{ $hfltsLinguistik->B }}">
+                            </div>
+                        <br>
+                        <div class="input-group">
+                                <label for="C" class="col-md-4 col-form-label text-md-end">{{ __('C') }}</label>
+                                <input class="form-control" name="C" placeholder="" type="text" value="{{ $hfltsLinguistik->C }}">
+                            </div>
+                        <br>
+                        <div class="input-group">
+                                <label for="D" class="col-md-4 col-form-label text-md-end">{{ __('D') }}</label>
+                                <input class="form-control" name="D" placeholder="" type="text" value="{{ $hfltsLinguistik->D }}">
+                            </div>
                         <br>
                             <div class="row">
                                 <div class="col-md-6">

@@ -71,9 +71,45 @@
 
           <li class="nav-item">
             <a href="/admin/user" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon far fa-user"></i>
               <p>
                 Data User
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/dataperan" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Data Peran
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/datapelamar" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Data Pelamar
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/posisipekerjaan" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Posisi Pekerjaan
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/transaksi" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Transaksi
               </p>
             </a>
           </li>

@@ -6,6 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LinguistikController;
+use App\Http\Controllers\Admin\DataPeranController;
+use App\Http\Controllers\Admin\DataPelamarController;
+use App\Http\Controllers\Admin\PosisiPekerjaanController;
+use App\Http\Controllers\Admin\TransaksiController;
 use App\Http\Controllers\Admin\HfltsLinguistikController;
 use App\Http\Controllers\Admin\CriteriaController;
 use App\Http\Controllers\Admin\AlternativeController;
@@ -50,6 +54,18 @@ Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
 
     // DATA TABEL HFLTS - LINGUISTIK
     Route::resource('/admin/hflts', HfltsLinguistikController::class);
+
+    // DATA PERAN ADMIN
+    Route::resource('/admin/dataperan', DataPeranController::class);
+
+    // DATA PELAMAR
+    Route::resource('/admin/datapelamar', DataPelamarController::class);
+
+    // DATA PELAMAR
+    Route::resource('/admin/posisipekerjaan', PosisiPekerjaanController::class);
+
+    // DATA TRANSAKSI
+    Route::resource('/admin/transaksi', TransaksiController::class);
 
     // DATA KRITERIA
     Route::get('/admin/kriteria', [CriteriaController::class, 'index']);

@@ -64,7 +64,7 @@ class HfltsLinguistikController extends Controller
     public function edit($id)
     {
         // Menampilkan detail data dengan menemukan berdasarkan Nim Mahasiswa untuk diedit
-        $hfltsLinguistik = hfltsLinguistik::with('hflts_linguistik')->where('id', $id)->first();
+        $hfltsLinguistik = hfltsLinguistik::find($id);
         $Linguistik = Linguistik::all();
         return view('admin/package/hflts/update', ['Linguistik' => $Linguistik,'hfltsLinguistik' => $hfltsLinguistik]);
     }
@@ -86,9 +86,6 @@ class HfltsLinguistikController extends Controller
             'C' => 'required',
             'D' => 'required',
         ]);
-
-        $Linguistik = new Linguistik;
-        $Linguistik->id = $request->get('id_linguistik');
 
         // Fungsi eloquent untuk mengupdate data inputan kita
         hfltsLinguistik::find($id)->update($request->all());
